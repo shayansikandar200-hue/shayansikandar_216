@@ -1,0 +1,13 @@
+class BMICalculator:
+    def __init__(self):
+        self.__LBS_TO_KG = 0.453592
+        self.__IN_TO_M = 0.0254
+
+    def calculate_metric(self, weight_kg, height_m):
+        return round(weight_kg / (height_m ** 2), 2)
+
+    def calculate_us(self, weight_lbs, feet, inches):
+        total_inches = (feet * 12) + inches
+        kg = weight_lbs * self.__LBS_TO_KG
+        meters = total_inches * self.__IN_TO_M
+        return round(kg / (meters ** 2), 2)
