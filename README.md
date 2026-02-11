@@ -20,4 +20,12 @@ In this assignment, I practiced using properties in object-oriented programming 
 
 Assignment#4
 
-In this assignment, I learned how to add validation, exception handling, and assertions to an object-oriented Python program. I extended the BMI calculator to use properties that validate input for type and range, ensuring that only valid height and weight values are accepted. The BMI property is read-only and automatically calculates BMI from the stored values. In the main program, user inputs are validated, and exceptions are caught to terminate the program gracefully if invalid data is entered. Assertions are used to confirm assumptions about user choices. This project helped me understand how to make programs more robust, reliable, and professional, which is important for both my coursework and future career in technology. I used Python documentation, Wikiversity lessons on validation and properties, and GitHub for version control while completing this assignment.
+In this assignment, I extended the BMI calculator to use object-oriented programming with properties and focused on input validation, parameter validation, assertions, and exception handling. The BMI class now automatically calculates BMI from the stored height and weight values, and all properties validate that only correct data types and ranges are accepted. The main program validates user input and handles exceptions gracefully, terminating the program if invalid input is entered. Assertions are used to confirm assumptions, such as the user’s choice of units.
+
+Through this assignment, I learned how to make programs more robust, maintainable, and professional. I now understand the importance of validating both user input and class parameters, using exceptions to handle errors, and using assertions to verify program assumptions. This knowledge will help me write reliable and well-structured code for future projects, coursework, and my career in software development or cybersecurity.
+
+Resources Used:
+
+Python Documentation – https://docs.python.org/3/
+
+Wikiversity: Object-Oriented Programming (Properties, Validation) – https://en.wikiversity.org/wiki/Object-Oriented_Programming/Validation
