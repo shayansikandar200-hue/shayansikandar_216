@@ -1,15 +1,1 @@
-Encapsulation: Used private variables (e.g., __LBS_TO_KG) to protect internal data.
-
-PEP 8 Compliance: Followed standard Python naming conventions for classes and methods.
-
-Modularity: Separated the program into BMICalculator.py (logic) and main.py (interface).
-
-Reflection
-I learned to use OOP to make my code more organized and professional. By hiding the conversion math inside a class, I created a program that is easier to maintain and reuse. Following PEP 8 standards ensures my code meets industry expectations.
-
-Resources Used
-Python Documentation
-
-PEP 8 Style Guide
-
-GitHub Version Control
+I used encapsulation by creating private variables and helper methods inside the class to keep the conversion calculations hidden and protect the internal data. I followed PEP 8 naming conventions so the code is clean, readable, and consistent with Python standards. I also separated the program into two files, with BMICalculator.py handling the logic and main.py handling user input and output, which makes the program more organized and easier to manage. Through this project, I learned how object-oriented programming helps structure code better and makes it easier to maintain and reuse. I used the Python documentation, the PEP 8 style guide, and GitHub for version control.
