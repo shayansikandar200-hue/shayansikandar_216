@@ -1,0 +1,189 @@
+"""
+Assignment 4 - BMI Calculator with Validation, Exceptions, and Assertions
+
+This program demonstrates object-oriented programming using properties
+and implements robust data validation, exception handling, and assertions.
+"""
+
+class BMI:
+    """Represents a person's body measurements and calculates BMI."""
+
+    LBS_TO_KG = 0.453592
+    IN_TO_M = 0.0254
+    FT_TO_IN = 12
+
+    def __init__(self, *, feet=0, inches=0, pounds=None,
+                 kilograms=None, meters=None):
+        """
+        Initialize a BMI object with optional named parameters.
+        
+        Parameters:
+            feet (int): Height in feet, must be >= 0
+            inches (int): Height in inches, must be >= 0
+            pounds (float): Weight in pounds, must be > 0
+            kilograms (float): Weight in kilograms, must be > 0
+            meters (float): Height in meters, must be > 0
+
+        Raises:
+            ValueError: If any parameter is out of valid range.
+            TypeError: If any parameter has invalid type.
+        """
+        self._feet = 0
+        self._inches = 0
+        self._pounds = None
+        self._kilograms = None
+        self._meters = None
+
+        # Use property setters for validation
+        self.feet = feet
+        self.inches = inches
+        self.pounds = pounds
+        self.kilograms = kilograms
+        self.meters = meters
+
+    # ---------- Height Properties ----------
+    @property
+    def feet(self):
+        return self._feet
+
+    @feet.setter
+    def feet(self, value):
+        if not isinstance(value, int):
+            raise TypeError("Feet must be an integer")
+        if value < 0:
+            raise ValueError("Feet must be >= 0")
+        self._feet = value
+
+    @property
+    def inches(self):
+        return self._inches
+
+    @inches.setter
+    def inches(self, value):
+        if not isinstance(value, int):
+            raise TypeError("Inches must be an integer")
+        if value < 0:
+            raise ValueError("Inches must be >= 0")
+        self._inches = value
+
+    @property
+    def meters(self):
+        if self._meters is not None:
+            return self._meters
+        total_inches = (self._feet * self.FT_TO_IN) + self._inches
+        return total_inches * self.IN_TO_M
+
+    @meters.setter
+    def meters(self, value):
+        if value is None:
+            self._meters = None
+            return
+        if not isinstance(value, (int, float)):
+            raise TypeError("Meters must be a number")
+        if value <= 0:
+            raise ValueError("Meters must be > 0")
+        self._meters = value
+
+    # ---------- Weight Properties ----------
+    @property
+    def pounds(self):
+        return self._pounds
+
+    @pounds.setter
+    def pounds(self, value):
+        if value is None:
+            self._pounds = None
+            return
+        if not isinstance(value, (int, float)):
+            raise TypeError("Pounds must be a number")
+        if value <= 0:
+            raise ValueError("Pounds must be > 0")
+        self._pounds = value
+
+    @property
+    def kilograms(self):
+        if self._kilograms is not None:
+            return self._kilograms
+        if self._pounds is not None:
+            return self._pounds * self.LBS_TO_KG
+        return None
+
+    @kilograms.setter
+    def kilograms(self, value):
+        if value is None:
+            self._kilograms = None
+            return
+        if not isinstance(value, (int, float)):
+            raise TypeError("Kilograms must be a number")
+        if value <= 0:
+            raise ValueError("Kilograms must be > 0")
+        self._kilograms = value
+
+    # ---------- BMI Property ----------
+    @property
+    def bmi(self):
+        """
+        Returns the BMI as a read-only property.
+
+        Raises:
+            ValueError: If height or weight is missing or invalid
+        """
+        kg = self.kilograms
+        m = self.meters
+        if kg is None or m <= 0:
+            raise ValueError("Valid weight and height required to compute BMI")
+        return round(kg / (m ** 2), 2)
+
+
+def get_numeric_input(prompt, dtype=float, min_value=None):
+    """
+    Prompts user for numeric input, validates type and range.
+
+    Parameters:
+        prompt (str): Input prompt for the user
+        dtype (type): Expected type (int or float)
+        min_value (number): Minimum allowed value
+
+    Returns:
+        number: Validated user input
+
+    Raises:
+        ValueError: If input is not valid
+    """
+    value = input(prompt)
+    try:
+        value = dtype(value)
+    except ValueError:
+        raise ValueError(f"Input must be a {dtype.__name__}")
+    if min_value is not None and value < min_value:
+        raise ValueError(f"Input must be >= {min_value}")
+    return value
+
+
+def main():
+    """Main program to run BMI calculator with validation and exception handling."""
+    print("=== BMI Calculator ===")
+    try:
+        choice = input("Metric (M) or US (U)? ").upper()
+        assert choice in ("M", "U"), "Choice must be M or U"
+
+        if choice == "M":
+            kg = get_numeric_input("Weight (kg): ", float, 0.1)
+            m = get_numeric_input("Height (m): ", float, 0.1)
+            person = BMI(kilograms=kg, meters=m)
+
+        elif choice == "U":
+            lbs = get_numeric_input("Weight (lbs): ", float, 1)
+            ft = get_numeric_input("Height (feet): ", int, 0)
+            inch = get_numeric_input("Height (inches): ", int, 0)
+            person = BMI(pounds=lbs, feet=ft, inches=inch)
+
+        print("Your BMI is:", person.bmi)
+
+    except (ValueError, TypeError, AssertionError) as e:
+        print("Error:", e)
+        print("Program terminated due to invalid input.")
+
+
+if __name__ == "__main__":
+    main()
