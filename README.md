@@ -29,3 +29,10 @@ Resources Used:
 Python Documentation – https://docs.python.org/3/
 
 Wikiversity: Object-Oriented Programming (Properties, Validation) – https://en.wikiversity.org/wiki/Object-Oriented_Programming/Validation
+
+ASSIGNMMENT#5
+
+In this assignment, I developed a BMI calculation class and implemented a comprehensive suite of unit tests. Through this process, I learned how automated testing ensures code reliability by catching edge cases—like zero height—before they cause system failures. I also gained experience with code coverage tools to verify that every line of logic was executed during testing. I intend to use this "test-driven" approach in future projects to minimize debugging time and write more professional, bug-free code. All spelling and grammar have been verified using Grammarly, and the source code follows standard documentation practices.
+HELPFUL RESOURCES:
+https://en.wikipedia.org/wiki/Unit_testing
+https://docs.python.org/3/library/unittest.html
