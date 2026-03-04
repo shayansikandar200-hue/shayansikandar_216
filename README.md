@@ -36,3 +36,9 @@ In this assignment, I developed a BMI calculation class and implemented a compre
 HELPFUL RESOURCES:
 https://en.wikipedia.org/wiki/Unit_testing
 https://docs.python.org/3/library/unittest.html
+
+...................................
+
+ASSIGNMENT 6
+
+ Assignment 6 – Inheritance  In this assignment, I learned how inheritance allows classes to reuse code from a base class while extending behavior through specialized subclasses. I created an Employee superclass and derived Manager, SalesEmployee, and HourlyEmployee classes. Each subclass overrides methods and adds unique features, demonstrating polymorphism and code reuse. I also implemented unit testing using Python’s unittest module to ensure 100% functionality. Understanding inheritance will help me write cleaner, modular, and maintainable software, which is important for my future career in cybersecurity and secure system development.
