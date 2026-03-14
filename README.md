@@ -42,3 +42,9 @@ https://docs.python.org/3/library/unittest.html
 ASSIGNMENT 6
 
  Assignment 6 – Inheritance  In this assignment, I learned how inheritance allows classes to reuse code from a base class while extending behavior through specialized subclasses. I created an Employee superclass and derived Manager, SalesEmployee, and HourlyEmployee classes. Each subclass overrides methods and adds unique features, demonstrating polymorphism and code reuse. I also implemented unit testing using Python’s unittest module to ensure 100% functionality. Understanding inheritance will help me write cleaner, modular, and maintainable software, which is important for my future career in cybersecurity and secure system development.
+
+ ...................................
+
+ ASSIGNMENT 7
+
+ In this assignment I learned about polymorphism in object-oriented programming. I created a base Employee class and implemented subclasses that override the get_pay() method. This helped me understand how polymorphism allows different objects to respond to the same method in different ways. I plan to use these programming concepts in my future coursework and cybersecurity career to build structured and reusable code.
