@@ -48,3 +48,9 @@ ASSIGNMENT 6
  ASSIGNMENT 7
 
  In this assignment I learned about polymorphism in object-oriented programming. I created a base Employee class and implemented subclasses that override the get_pay() method. This helped me understand how polymorphism allows different objects to respond to the same method in different ways. I plan to use these programming concepts in my future coursework and cybersecurity career to build structured and reusable code.
+.................................
+
+
+ Assignment 8:
+
+ In this session, I transitioned from console-based programming to developing Graphical User Interfaces (GUIs) using Python’s tkinter library. I learned how to manage event-driven environments and implement interactive elements like menus, scrollbars, and context menus. Furthermore, I addressed previous feedback by integrating automated unit testing directly into my class modules, ensuring that base class methods are tested independently of the GUI launch. I intend to apply these Object-Oriented principles to build more robust, user-friendly software in my future career as a software developer.
