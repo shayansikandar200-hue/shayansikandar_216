@@ -1,0 +1,14 @@
+Output 1:
+.....
+----------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+OUTPUT 2:
+
+Employee: Alice, ID: 1
+Pay: 200
+Employee: Bob, ID: 2
+Pay: 100
+
