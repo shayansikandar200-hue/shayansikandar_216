@@ -62,3 +62,10 @@ ASSIGNMENT 6
  In this assignment, I learned how to design and extend a basic text editor application using object-oriented programming concepts. I implemented menu systems, event handling, and user interaction features such as cut, copy, paste, and context menus.
 
 I plan to apply this knowledge in my cybersecurity and IT career by building user-friendly tools and interfaces. Understanding programming fundamentals like this will help me create secure applications and automate tasks in the future.
+
+..................................................
+ASSIGNMENT 10
+
+In this assignment, I learned how to build a simple text editor using Java. I implemented file features such as Open, Save, and Save As using dialog boxes. I also added a formatting feature to change the text color.
+
+This assignment helped me understand how GUI applications work and how to handle user actions. I will use this knowledge to build more interactive programs in the future and improve my programming skills for my education and career.
