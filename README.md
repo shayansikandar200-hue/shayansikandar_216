@@ -54,3 +54,11 @@ ASSIGNMENT 6
  Assignment 8:
 
  In this session, I transitioned from console-based programming to developing Graphical User Interfaces (GUIs) using Python’s tkinter library. I learned how to manage event-driven environments and implement interactive elements like menus, scrollbars, and context menus. Furthermore, I addressed previous feedback by integrating automated unit testing directly into my class modules, ensuring that base class methods are tested independently of the GUI launch. I intend to apply these Object-Oriented principles to build more robust, user-friendly software in my future career as a software developer.
+
+ ....................................................
+
+ Assignment 9
+
+ In this assignment, I learned how to design and extend a basic text editor application using object-oriented programming concepts. I implemented menu systems, event handling, and user interaction features such as cut, copy, paste, and context menus.
+
+I plan to apply this knowledge in my cybersecurity and IT career by building user-friendly tools and interfaces. Understanding programming fundamentals like this will help me create secure applications and automate tasks in the future.
